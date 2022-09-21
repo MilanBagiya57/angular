@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+        <div class="box-body">
+            <form [formGroup]="productForm" (ngSubmit)="productForm.valid && onSubmit()">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" formControlName="name">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Category</label>
+                        <input type="text" class="form-control" name="category" formControlName="category">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Quntity</label>
+                        <input type="number" class="form-control" name="quntity" formControlName="quntity">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Price</label>
+                        <input type="price" class="form-control" name="price" formControlName="price">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Manufacture Date</label>
+                        <input type="date" class="form-control" name="matufacture_date" formControlName="matufacture_date">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Expiry name</label>
+                        <input type="date" class="form-control" name="expiry_date" formControlName="expiry_date">
+                    </div>
+                </div>
+                <button type="submit" [disabled]="productForm.invalid" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+</section>
